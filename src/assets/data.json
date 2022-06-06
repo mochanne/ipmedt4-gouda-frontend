@@ -1,0 +1,98 @@
+{
+    "QRMarkers": [
+        {
+            "description": "Bolwerk",
+            "name": "punt 1",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/bolwerk/",
+            "geometry": [
+                52.011312, 
+                4.702331
+            ]
+        },
+        {
+            "description": "Lage Gouwe, Amsterdams verlaat",
+            "name": "punt 2",
+            "geometry": [
+                52.011071, 
+                4.704982
+            ]
+        },
+        {
+            "description": "Lange Groenendaal, feestboog",
+            "name": "punt 3",
+            "geometry": [
+                52.01021, 4.706901
+            ]
+        },
+        {
+            "description": "Lage Gouwe, apotheek",
+            "name": "punt 4",
+            "geometry": [
+                52.009978, 4.706735
+            ]
+        },
+        {
+            "description": "Markt, Kabelwerkzaamheden",
+            "name": "punt 5",
+            "geometry": [
+                52.01117, 4.710124
+            ]
+        },
+        {
+            "description": "Markt, Stadhuis",
+            "name": "punt 6",
+            "geometry": [
+                52.011461, 4.710424
+            ]
+        },
+        {
+            "description": "St. Jan, Torenstraat",
+            "name": "punt 7",
+            "geometry": [
+                52.010589, 4.710339
+            ]
+        },
+        {
+            "description": "Wijdstraat, De Zon",
+            "name": "punt 8",
+            "geometry": [
+                52.011078, 4.71036
+            ]
+        },
+        {
+            "description": "Lage Gouwe, schip",
+            "name": "punt 9",
+            "geometry": [
+                52.009995, 4.709641
+            ]
+        },
+        {
+            "description": "IJsselkade, Westwaarts",
+            "name": "punt 10",
+            "geometry": [
+                52.006989, 4.712668
+            ]
+        },
+        {
+            "description": "Mallegatsluis",
+            "name": "punt 11",
+            "geometry": [
+                52.006554, 4.712086
+            ]
+        },
+        {
+            "description": "Turfsingel, Veer",
+            "name": "punt 12",
+            "geometry": [
+                52.008192, 4.706342
+            ]
+        },
+        {
+            "description": "Vest, Asschuur",
+            "name": "punt 13",
+            "geometry": [
+                52.008317, 4.705787
+            ]
+        }
+    ]
+}
