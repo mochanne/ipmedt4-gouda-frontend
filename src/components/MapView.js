@@ -3,6 +3,7 @@ import { Map, MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import data from '../assets/data';
 import QRMarkers from './QRMarkers';
+import RoutineMachine from "./RoutingMachine";
 
 class MapView extends Component {
   constructor(props) {
@@ -22,6 +23,8 @@ class MapView extends Component {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
+
+        <RoutineMachine />
 
         <QRMarkers QRMarkers={data.QRMarkers}/>
       </MapContainer>
