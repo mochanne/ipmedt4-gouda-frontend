@@ -12,6 +12,7 @@
         {
             "description": "Lage Gouwe, Amsterdams verlaat",
             "name": "punt 2",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/lage-gouwe-amsterdams-verlaat/" ,
             "geometry": [
                 52.011071, 
                 4.704982
@@ -20,6 +21,7 @@
         {
             "description": "Lange Groenendaal, feestboog",
             "name": "punt 3",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/lange-groenendaal-feestboog/",
             "geometry": [
                 52.01021, 4.706901
             ]
@@ -27,6 +29,7 @@
         {
             "description": "Lage Gouwe, apotheek",
             "name": "punt 4",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/lage-gouwe-apotheek/",
             "geometry": [
                 52.009978, 4.706735
             ]
@@ -34,6 +37,7 @@
         {
             "description": "Markt, Kabelwerkzaamheden",
             "name": "punt 5",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/markt-kabelwerkzaamheden/",
             "geometry": [
                 52.01117, 4.710124
             ]
@@ -41,6 +45,7 @@
         {
             "description": "Markt, Stadhuis",
             "name": "punt 6",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/markt-stadhuis/",
             "geometry": [
                 52.011461, 4.710424
             ]
@@ -48,6 +53,7 @@
         {
             "description": "St. Jan, Torenstraat",
             "name": "punt 7",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/st-jan-torenstraat/",
             "geometry": [
                 52.010589, 4.710339
             ]
@@ -55,6 +61,7 @@
         {
             "description": "Wijdstraat, De Zon",
             "name": "punt 8",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/wijdstraat-de-zon/",
             "geometry": [
                 52.011078, 4.71036
             ]
@@ -62,6 +69,7 @@
         {
             "description": "Lage Gouwe, schip",
             "name": "punt 9",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/lage-gouwe-schip/",
             "geometry": [
                 52.009995, 4.709641
             ]
@@ -69,6 +77,7 @@
         {
             "description": "IJsselkade, Westwaarts",
             "name": "punt 10",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/ijsselkade-westwaarts/",
             "geometry": [
                 52.006989, 4.712668
             ]
@@ -76,6 +85,7 @@
         {
             "description": "Mallegatsluis",
             "name": "punt 11",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/mallegatsluis/",
             "geometry": [
                 52.006554, 4.712086
             ]
@@ -83,6 +93,7 @@
         {
             "description": "Turfsingel, Veer",
             "name": "punt 12",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/turfsingel-veer/",
             "geometry": [
                 52.008192, 4.706342
             ]
@@ -90,6 +101,7 @@
         {
             "description": "Vest, Asschuur",
             "name": "punt 13",
+            "link": "https://www.beeldengedicht.nl/beeldengedicht/vest-asschuur/",
             "geometry": [
                 52.008317, 4.705787
             ]
