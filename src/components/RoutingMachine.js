@@ -2,6 +2,7 @@ import L from "leaflet";
 import {Icon} from './Icon';
 import { createControlComponent } from "@react-leaflet/core";
 import "leaflet-routing-machine";
+import "lrm-graphhopper"
 
 import icon from 'leaflet/dist/images/marker-icon.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
@@ -15,7 +16,6 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 const createRoutineMachineLayer = (props) => {
   const instance = L.Routing.control({
-    router: L.routing.mapbox( {profile: "walking"}),
     waypoints: [
       L.latLng(52.011312, 4.702331),
       L.latLng(52.011065, 4.705194),
@@ -35,6 +35,11 @@ const createRoutineMachineLayer = (props) => {
     lineOptions: {
       styles: [{ color: "#6FA1EC", weight: 4 }]
     },
+    router: new L.Routing.graphHopper('866aff00-bd42-435e-9e17-aca9086c4095', {
+      urlParameters: {
+        vehicle: "foot"
+      }
+    }),
     show: false,
     addWaypoints: false,
     routeWhileDragging: true,
