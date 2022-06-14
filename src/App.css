@@ -21,6 +21,13 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    background: var(--clr-white);
+
+    font-family: var(--ff-primary);
+    color: var(--clr-black);
+}
+
 .leaflet-container {
     width: 100vw;
     height: 100vh;
@@ -28,4 +35,22 @@ html {
 
 .leaflet-control-container .leaflet-routing-container-hide {
     display: none;
+}
+
+h1, h2 {
+    font-weight: 700;
+}
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+h3 {
+    font-weight: 500;
+    font-size: 2rem;
+}
+p {
+    font-weight: 400;
+    font-size: 1.8rem;
 }

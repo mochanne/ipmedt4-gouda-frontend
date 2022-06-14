@@ -1,0 +1,52 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.home__watermark {
+    position: absolute;
+    z-index: -1;
+    top: 2rem;
+    right: 2rem;
+    width: 50%;
+    max-width: 30rem;
+}
+.home__watermark img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.home__header {
+    width: 100%;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home__header-logo {
+    width: 50%;
+    max-width: 30rem;
+}
+.home__header-logo img {
+    width: 100%;
+}
+
+.home__content {
+    width: 100%;
+    padding: 0 0 5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.home__routeCardList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
