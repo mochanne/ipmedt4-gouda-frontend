@@ -1,3 +1,26 @@
+:root {
+    --clr-primary: #223E2B;
+    --clr-secondary: #E7AE19;
+
+    --clr-black: #06120F;
+    --clr-white: #FFFFFF;
+    --clr-grey: #D5D6D1;
+
+    --ff-primary: 'Karla', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
 .leaflet-container {
     width: 100vw;
     height: 100vh;
