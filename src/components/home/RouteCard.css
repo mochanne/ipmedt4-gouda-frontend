@@ -1,4 +1,112 @@
 .routeCard {
+    width: 100%;
+    height: 16rem;
+    display: grid;
+    grid-template-columns: 30% 62%;
+    gap: 8%;
+
+    position: relative;
+
     background: var(--clr-primary);
     color: var(--clr-white);
+    border-radius: 3rem 0 0 3rem;
+    box-shadow: 0 10px 20px rgba(50,50,93,.15), 0 5px 10px rgba(0,0,0,.1);
+    transition: 0.2s all ease;
+}
+
+.routeCard:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 transparent;
+}
+.routeCard:hover .routeCard__startBtn .material-symbols-outlined {
+    animation: wiggle 0.5s infinite ease;
+}
+
+.routeCard__image {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.routeCard__image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    border-radius: 3rem 0 0 3rem;
+}
+
+.routeCard__progressCard {
+    position: absolute;
+    z-index: 2;
+    bottom: 2rem;
+    left: 18%;
+    padding: 0.6rem 0.8rem;
+
+    background: var(--clr-white);
+    border-radius: 1rem;
+}
+.routeCard__progressCard-score {
+    color: var(--clr-black);
+    font-weight: 600;
+    letter-spacing: -0.1rem;
+}
+
+.routeCard__content {
+    height: 100%;
+    padding: 2rem 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.routeCard__startBtn {
+    margin-top: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
+
+    background: transparent;
+    border: none;
+}
+.routeCard__startBtn-text {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--clr-white);
+}
+.routeCard__startBtn .material-symbols-outlined {
+    color: var(--clr-white);
+}
+
+.routeCard__progressBar{
+    width: 85%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.routeCard__progressBar-total{
+    height: 2rem;
+    width: 100%;
+    /* position: absolute; */
+
+    background: var(--clr-grey);
+    border-radius: 1rem;
+}
+.routeCard__progressBar-complete{
+    height: 2rem;
+    position: absolute;
+    z-index: 2;
+
+    background: var(--clr-secondary);
+    border-radius: 1rem;
+}
+
+/* keyframes */
+@keyframes wiggle {
+    0% {
+        transform: translateX(0rem);
+    }
+    50% {
+        transform: translateX(0.3rem);
+    }
 }

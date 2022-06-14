@@ -10,16 +10,20 @@ class Home extends React.Component {
         
         const routeList = [
             {
+                id: 0,
                 name: 'West 3',
                 distance: '5km',
                 totalPoints: 15,
-                completedPoint: 5
+                completedPoints: 12,
+                imgUrl: 'img/west3.jpg'
             },
             {
+                id: 1,
                 name: 'Noord 1',
                 distance: '3km',
                 totalPoints: 10,
-                completedPoint: 0
+                completedPoints: 0,
+                imgUrl: 'img/noord1.jpg'
             },
         ];
     
@@ -27,11 +31,11 @@ class Home extends React.Component {
         return(
             <main className='home'>
                 <figure className='home__watermark'>
-                    <img src="beeldmerk.png" alt="watermark" />
+                    <img src="img/beeldmerk.png" alt="watermark" />
                 </figure>
                 <header className='home__header'>
                     <figure className='home__header-logo'>
-                        <img src="logo.png" alt="logo" />
+                        <img src="img/logo.png" alt="logo" />
                     </figure>
                 </header>
 
@@ -41,9 +45,9 @@ class Home extends React.Component {
                     </header>
                     <section className='home__routeCardList'>
 
-                        {routeList.map((route) => {
-                            return <RouteCard route={route}/>
-                        })}
+                        {routeList.map( route => 
+                            <RouteCard key={route.id} route={route}/>
+                        )}
                         
                     </section>
                 </article>
