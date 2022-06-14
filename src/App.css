@@ -54,3 +54,13 @@ p {
     font-weight: 300;
     font-size: 1.8rem;
 }
+a {
+    text-decoration: none;
+}
+
+/* On screens that are 1200px or above */
+@media screen and (min-width: 1200px) {
+    h3 {
+        font-size: 2.5rem;
+    }
+}

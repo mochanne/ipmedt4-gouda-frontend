@@ -2,8 +2,8 @@
     width: 100%;
     height: 16rem;
     display: grid;
-    grid-template-columns: 30% 62%;
-    gap: 8%;
+    grid-template-columns: 30% 63%;
+    gap: 7%;
 
     position: relative;
 
@@ -67,10 +67,12 @@
 
     background: transparent;
     border: none;
+
+    cursor: pointer;
 }
 .routeCard__startBtn-text {
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--clr-white);
 }
 .routeCard__startBtn .material-symbols-outlined {
@@ -108,5 +110,26 @@
     }
     50% {
         transform: translateX(0.3rem);
+    }
+}
+
+
+/* On screens that are 1000px or above */
+@media screen and (min-width: 800px) {
+    .routeCard{
+        gap: 5%;
+    }
+}
+
+/* On screens that are 1000px or above */
+@media screen and (min-width: 1000px) {
+    .routeCard{
+        height: 20rem;
+        grid-template-columns: 25% 70%;
+        gap: 5%;
+    }
+
+    .routeCard__startBtn-text {
+        font-size: 1.8rem;
     }
 }
