@@ -1,6 +1,7 @@
 import React from 'react';
-import './Home.css';
+import { Link } from 'react-router-dom';
 
+import './Home.css';
 import RouteCard from '../components/home/RouteCard';
 
 class Home extends React.Component {
@@ -46,7 +47,9 @@ class Home extends React.Component {
                     <section className='home__routeCardList'>
 
                         {routeList.map( route => 
-                            <RouteCard key={route.id} route={route}/>
+                            <Link to='/map' key={route.id}>
+                                <RouteCard route={route}/>
+                            </Link>
                         )}
                         
                     </section>
