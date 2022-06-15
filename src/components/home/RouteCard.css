@@ -19,7 +19,7 @@
     box-shadow: 0 0 0 transparent;
 }
 .routeCard:hover .routeCard__startBtn .material-symbols-outlined {
-    animation: wiggle 0.5s infinite ease;
+    animation: wiggle 0.8s infinite ease;
 }
 
 .routeCard__image {
@@ -108,7 +108,13 @@
     0% {
         transform: translateX(0rem);
     }
-    50% {
+    40% {
+        transform: translateX(0.3rem);
+    }
+    60% {
+        transform: translateX(0rem);
+    }
+    80% {
         transform: translateX(0.3rem);
     }
 }
