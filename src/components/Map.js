@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { Map, MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import data from '../assets/data';
 import QRMarkers from './QRMarkers';
 import RoutingMachine from "./RoutingMachine";
 import APIget from './APIget';
 
-class MapView extends Component {
+class Map extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -19,11 +19,12 @@ class MapView extends Component {
     const { currentLocation, zoom } = this.state;
 
     return (
-      <MapContainer center={currentLocation} zoom={zoom}>
+      <MapContainer center={currentLocation} zoom={zoom} zoomControl={false}>
         <TileLayer
           url= "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" //"http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg" //"https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png" //"https://tile.memomaps.de/tilegen/{z}/{x}/{y}.png" //"http://{s}.google.com/vt/lyrs=mx={x}y={y}z={z}"  //"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
+        <ZoomControl position='topright'/>
 
         <RoutingMachine />
 
@@ -35,4 +36,4 @@ class MapView extends Component {
   }
 }
 
-export default MapView;
+export default Map;

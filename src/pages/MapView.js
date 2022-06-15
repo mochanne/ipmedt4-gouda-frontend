@@ -5,7 +5,11 @@ import Map from '../components/Map';
 
 function MapView() {
     return (
-        <Map />
+        <main className='mapView'>
+            
+            <Map />
+
+        </main>
     );
 }
 
