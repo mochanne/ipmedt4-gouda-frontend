@@ -3,28 +3,12 @@ import React from 'react';
 import './MapView.css';
 import LeafletMap from '../components/mapView/leafletMap/LeafletMap';
 import MapMenu from '../components/mapView/MapMenu';
+import { useLocation } from 'react-router-dom';
 
-class MapView extends React.Component {
-    render() {
-
-        const routeList = [
-            {
-                id: 0,
-                name: 'West 3',
-                distance: '5km',
-                totalPoints: 15,
-                completedPoints: 12,
-                imgUrl: 'img/west3.jpg'
-            },
-            {
-                id: 1,
-                name: 'Noord 1',
-                distance: '3km',
-                totalPoints: 10,
-                completedPoints: 0,
-                imgUrl: 'img/noord1.jpg'
-            },
-        ];
+const MapView = () => {
+    
+        const location = useLocation();
+        const route = location.state;
 
         return (
             <main className='mapView'>
@@ -35,14 +19,13 @@ class MapView extends React.Component {
                     </span>
                 </a>
 
-                <MapMenu route={routeList[0]} />
+                <MapMenu route={route} />
     
                 <LeafletMap />
             
             </main>
         );
 
-    }
 }
 
 export default MapView;

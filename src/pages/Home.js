@@ -6,10 +6,8 @@ import RouteCard from '../components/home/RouteCard';
 
 class Home extends React.Component {
 
-    render() {
-
-        
-        const routeList = [
+    state = {
+        routeList: [
             {
                 id: 0,
                 name: 'West 3',
@@ -26,8 +24,11 @@ class Home extends React.Component {
                 completedPoints: 0,
                 imgUrl: 'img/noord1.jpg'
             },
-        ];
-    
+        ]
+    }
+
+    render() {
+
 
         return(
             <main className='home'>
@@ -46,10 +47,12 @@ class Home extends React.Component {
                     </header>
                     <section className='home__routeCardList'>
 
-                        {routeList.map( route => 
-                            <Link to='/map' key={route.id}>
+                        {this.state.routeList.map( route => 
+                            
+                            <Link to='/map' key={route.id} state={route}>
                                 <RouteCard route={route}/>
                             </Link>
+
                         )}
                         
                     </section>
