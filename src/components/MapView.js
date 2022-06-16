@@ -5,6 +5,7 @@ import data from '../assets/data';
 import QRMarkers from './QRMarkers';
 import RoutingMachine from "./RoutingMachine";
 import APIget from './APIget';
+import Geo from './Geo';
 
 class MapView extends Component {
   constructor(props) {
@@ -26,6 +27,8 @@ class MapView extends Component {
         />
 
         <RoutingMachine />
+
+        <Geo />
 
         <APIget />
 
