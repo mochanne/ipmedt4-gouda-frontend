@@ -1,0 +1,46 @@
+.mapView{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.mapView__backBtn {
+    position: absolute;
+    z-index: 42069;
+    top: 2rem;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--clr-primary);
+    border: none;
+    border-radius: 0.8rem;
+    box-shadow: 0 8px 15px rgba(50,50,93,.2), 0 5px 10px rgba(0,0,0,.1);
+}
+.mapView__backBtn .material-symbols-outlined {
+    font-weight: 700;
+    color: var(--clr-white);
+}
+.mapView__backBtn:hover .material-symbols-outlined{
+    animation: wiggle 0.8s infinite ease;
+}
+
+/* keyframes */
+@keyframes wiggle {
+    0% {
+        transform: translateX(0rem);
+    }
+    40% {
+        transform: translateX(0.1rem);
+    }
+    60% {
+        transform: translateX(0rem);
+    }
+    80% {
+        transform: translateX(0.1rem);
+    }
+}
