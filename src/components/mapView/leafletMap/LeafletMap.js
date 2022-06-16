@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { MapContainer, TileLayer, ZoomControl } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import data from '../../..//assets/data';
+import data from '../../../assets/data';
 import QRMarkers from './QRMarkers';
 import RoutingMachine from "./RoutingMachine";
 import APIget from './APIget';
