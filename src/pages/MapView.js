@@ -1,9 +1,11 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import './MapView.css';
 import LeafletMap from '../components/mapView/leafletMap/LeafletMap';
 import MapMenu from '../components/mapView/MapMenu';
-import { useLocation } from 'react-router-dom';
+import Popup from '../components/mapView/Popup';
+
 
 const MapView = () => {
     
@@ -20,6 +22,8 @@ const MapView = () => {
                 </a>
 
                 <MapMenu route={route} />
+
+                {/* <Popup /> */}
     
                 <LeafletMap />
             
