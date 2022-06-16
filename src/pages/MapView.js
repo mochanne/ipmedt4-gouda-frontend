@@ -11,6 +11,7 @@ const MapView = () => {
     
         const location = useLocation();
         const route = location.state;
+        
 
         return (
             <main className='mapView'>

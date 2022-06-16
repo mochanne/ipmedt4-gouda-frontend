@@ -4,16 +4,17 @@
     width: 100vw;
     z-index: 42070;
     display: flex;
-    align-items: center;
     justify-content: center;
 
     background: rgba(0,0,0,0.2);
 }
 
 .popup{
+    position: absolute;
     width: 90%;
     height: calc(100% - 30rem);
-    transform: translateY(-5rem);
+    /* transform: translateY(-5rem); */
+    top: 10rem;
     display: flex;
     flex-direction: column;
     gap: 1%;
@@ -21,6 +22,8 @@
     background: var(--clr-white);
     border-radius: 4.5rem;
     box-shadow: 0 8px 15px rgba(50,50,93,.2), 0 5px 10px rgba(0,0,0,.1);
+
+    animation: 0.8s pop-in;
 }
 
 .popup__image {
@@ -57,4 +60,15 @@
     font-size: 1.6rem;
 }
 
+/* keyframes */
+@keyframes pop-in {
+    0% { 
+        opacity: 0; 
+        transform: scale(0.5);
+    }
+    100% { 
+        opacity: 1; 
+        transform: scale(1);
+    }
+}
 
