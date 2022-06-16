@@ -26,7 +26,7 @@ class MapView extends Component {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
 
-        <RoutingMachine />
+        <RoutingMachine QRMarkers={data.QRMarkers} />
 
         <APIget />
 

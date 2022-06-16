@@ -1,5 +1,4 @@
 import L from "leaflet";
-import {Icon} from './Icon';
 import { createControlComponent } from "@react-leaflet/core";
 import "leaflet-routing-machine";
 import "lrm-graphhopper"
@@ -17,20 +16,20 @@ L.Marker.prototype.options.icon = DefaultIcon;
 const createRoutineMachineLayer = (props) => {
   const instance = L.Routing.control({
     waypoints: [
-      L.latLng(52.011312, 4.702331),
-      L.latLng(52.011065, 4.705194),
-      L.latLng(52.010103, 4.706661),
-      L.latLng(52.01021, 4.706901),
-      L.latLng(52.01117, 4.710124),
-      L.latLng(52.011461, 4.710424),
-      L.latLng(52.010589, 4.710339),
-      L.latLng(52.011078, 4.71036),
-      L.latLng(52.009995, 4.709641),
-      L.latLng(52.006989, 4.712668),
-      L.latLng(52.006554, 4.712086),
-      L.latLng(52.008192, 4.706342),
-      L.latLng(52.008317, 4.705787),
-      L.latLng(52.011312, 4.702331)/**/
+      L.latLng(props.QRMarkers[0].geometry[0], props.QRMarkers[0].geometry[1]),
+      L.latLng(props.QRMarkers[1].geometry[0], props.QRMarkers[1].geometry[1]),
+      L.latLng(props.QRMarkers[2].geometry[0], props.QRMarkers[2].geometry[1]),
+      L.latLng(props.QRMarkers[3].geometry[0], props.QRMarkers[3].geometry[1]),
+      L.latLng(props.QRMarkers[4].geometry[0], props.QRMarkers[4].geometry[1]),
+      L.latLng(props.QRMarkers[5].geometry[0], props.QRMarkers[5].geometry[1]),
+      L.latLng(props.QRMarkers[6].geometry[0], props.QRMarkers[6].geometry[1]),
+      L.latLng(props.QRMarkers[7].geometry[0], props.QRMarkers[7].geometry[1]),
+      L.latLng(props.QRMarkers[8].geometry[0], props.QRMarkers[8].geometry[1]),
+      L.latLng(props.QRMarkers[9].geometry[0], props.QRMarkers[9].geometry[1]),
+      L.latLng(props.QRMarkers[10].geometry[0], props.QRMarkers[10].geometry[1]),
+      L.latLng(props.QRMarkers[11].geometry[0], props.QRMarkers[11].geometry[1]),
+      L.latLng(props.QRMarkers[12].geometry[0], props.QRMarkers[12].geometry[1]),
+      L.latLng(props.QRMarkers[0].geometry[0], props.QRMarkers[0].geometry[1])/**/
     ],
     lineOptions: {
       styles: [{ color: "#6FA1EC", weight: 4 }]
