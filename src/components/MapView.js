@@ -28,8 +28,6 @@ class MapView extends Component {
 
         <RoutingMachine />
 
-        <Geo />
-
         <APIget />
 
         <QRMarkers QRMarkers={data.QRMarkers}/>
@@ -39,3 +37,5 @@ class MapView extends Component {
 }
 
 export default MapView;
+
+//<Geo />
