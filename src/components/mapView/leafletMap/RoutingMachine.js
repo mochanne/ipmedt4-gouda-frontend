@@ -33,7 +33,7 @@ const createRoutineMachineLayer = (props) => {
       L.latLng(52.011312, 4.702331)*/
     ],
     lineOptions: {
-      styles: [{ color: "#6FA1EC", weight: 4 }]
+      styles: [{ color: "#347656", weight: 4 }]
     },
     router: new L.Routing.graphHopper('866aff00-bd42-435e-9e17-aca9086c4095', {
       urlParameters: {
@@ -45,7 +45,8 @@ const createRoutineMachineLayer = (props) => {
     routeWhileDragging: true,
     draggableWaypoints: true,
     fitSelectedRoutes: false,
-    showAlternatives: false
+    showAlternatives: false,
+    
   });
 
   return instance;
