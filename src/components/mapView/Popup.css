@@ -25,6 +25,24 @@
     animation: 0.8s pop-in;
 }
 
+.popup__closeBtn{
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    cursor: pointer;
+
+    background: none;
+    border: none;
+}
+.popup__closeBtn .material-symbols-outlined{
+    color: var(--clr-white);
+    font-size: 3rem;
+    font-weight: 600;
+}
+.popup__closeBtn:hover .material-symbols-outlined{
+    color: var(--clr-secondary);
+}
+
 .popup__image {
     height: 40%;
     width: 100%;
@@ -88,15 +106,14 @@
 }
 .popup__content-block {
     width: 100%;
-    height: calc(100% - 7.5rem);
+    height: calc(100% - 8.5rem);
     display: none;
     overflow-y: scroll;
+    padding: 1rem 1rem 0 0;
 }
 .active-content {
     display: block;
 }
-
-
 
 
 /* keyframes */

@@ -22,6 +22,12 @@ const Popup = () => {
 
             <article className="popup">
 
+                <button className="popup__closeBtn">
+                    <span className="material-symbols-outlined">
+                        close
+                    </span>
+                </button>
+
                 <figure className="popup__image">
                     <img src="img/popup_image.jpg" alt="popup image" />
                 </figure>
