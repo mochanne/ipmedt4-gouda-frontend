@@ -24,7 +24,7 @@ const MapView = () => {
 
                 <MapMenu route={route} />
 
-                {/* <Popup /> */}
+                <Popup />
     
                 <LeafletMap />
             
