@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import {Marker} from 'react-leaflet';
 import {Icon} from './Icon';
-import MarkerPopup from './MarkerPopup'; 
+import MarkerPopup from './MarkerPopup';
 
 const QRMarkers = (props) => {
   const { QRMarkers } = props;
-  
+
   const markers = QRMarkers.map((QRMarkers, index) => (
     <Marker 
       key={index} 
@@ -14,7 +14,7 @@ const QRMarkers = (props) => {
     >
       <MarkerPopup data={QRMarkers}/>
     </Marker>
-  ));  
+  ));
   return <Fragment>{markers}</Fragment>
 };
 export default QRMarkers;

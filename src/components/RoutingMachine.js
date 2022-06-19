@@ -14,6 +14,7 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const createRoutineMachineLayer = (props) => {
+  console.log(props);
   const instance = L.Routing.control({
     waypoints: [
       L.latLng(props.QRMarkers[0].geometry[0], props.QRMarkers[0].geometry[1]),

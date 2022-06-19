@@ -1,29 +1,27 @@
-
-//const api_base_url = "http://192.168.43.66:8000/api/routeinfo/1"
+//const api_base_url = "http://lillibot.co.uk:8080"
+// test link `https://jsonplaceholder.typicode.com/posts`
 
 import { useState, useEffect} from "react";
 
+import axios from "axios";
+
 export default function APIget(){
     const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
 
-    useEffect(() =>{
-        fetch(`https://jsonplaceholder.typicode.com/posts`)
-        //.then((response) => console.log(response))
-        .then((response) => {
-            if (!response.ok) {
-              throw new Error(
-                `This is an HTTP error: The status is ${response.status}`
-              );
-            }
-            return response.json();
-          })
-          .then((actualData) => console.log(actualData))
-          .catch((err) => {
-            console.log(err.message);
-          });
-      }, []);
+    useEffect(() => {
+      const getData = async () => {
+        try {
+          const response = await axios.get(
+            "http://lillibot.co.uk:8080/api/routeinfo/2" 
+          );
+          setData(response.data);
+        } finally {
+          console.log(data); 
+        }
+      };
+      getData();
+    }, []);
+    
 }
 
 /*function APIget() {
