@@ -1,13 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-
 import {Icon} from './Icon';
 
-function LocationMarker() {
+const LocationMarker = (props) => {
     const [position, setPosition] = useState(null);
-    console.log (position);
-
     const map = useMap();
 
     useEffect(() => {
@@ -25,4 +22,4 @@ function LocationMarker() {
     );
   }
 
-  export default LocationMarker;
+export default LocationMarker;
