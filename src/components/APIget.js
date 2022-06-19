@@ -4,12 +4,13 @@
 import { useState, useEffect} from "react";
 import RoutingMachine from "./RoutingMachine";
 import QRMarkers from './QRMarkers';
+import Geo from "./Geo";
 
 import axios from "axios";
 
 export default function APIget(){
     const [data, setData] = useState(null);
-
+    
     useEffect(() => {
       const getData = async () => {
         try {
@@ -24,6 +25,7 @@ export default function APIget(){
       getData();
     }, []);
 
+    
     let infopoints;
     let QRpoints;
 
@@ -32,7 +34,7 @@ export default function APIget(){
     }
 
     if (data !== null){
-      QRpoints = <QRMarkers QRMarkers={data.infopoints}/>
+      QRpoints = <Geo QRMarkers={data.infopoints}/>
     }
 
     return(
