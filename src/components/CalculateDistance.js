@@ -4,16 +4,15 @@ import MarkerPopup from "./MarkerPopup";
 const calculateDistance = (props) =>
 {
     let latlong = props.data[6];
-    console.log(props.data[3]);
 
     const toRadian = n => (n * Math.PI) / 180
   
-      let lat2 = 52.011239 // latlong.lat //lattitude2
-      let lon2 = 4.710288 //latlong.lng //longittude2
-      let lat1 =  props.data[4]//lattitude1
-      let lon1 =  props.data[5] //longittude1
+      let lat2 = latlong.lat //lattitude2 52.011239
+      let lon2 = latlong.lng //longittude2  4.710288
+      let lat1 = props.data[4]//lattitude1
+      let lon1 = props.data[5] //longittude1
   
-      console.log(lat1, lon1+"==="+lat2, lon2)
+      //console.log(lat1, lon1+"==="+lat2, lon2)
       
       let R = 6371  // km
       let x1 = lat2 - lat1
@@ -26,7 +25,7 @@ const calculateDistance = (props) =>
       let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
       let d = R * c
       
-      console.log("distance==?",d);
+      //console.log("distance==?",d);
     
       let Popup
 
