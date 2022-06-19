@@ -5,7 +5,6 @@ import MarkerPopup from './MarkerPopup';
 
 const QRMarkers = (props) => {
   const { QRMarkers } = props;
-  console.log(props);
 
   const markers = QRMarkers.map(({latitude, longitude, afbeelding, gedicht, info, naam}, index) => (
     <Marker 
