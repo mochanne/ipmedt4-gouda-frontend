@@ -26,7 +26,7 @@ class MapView extends Component {
         infopoints:res.APIdata.infopoints
       })
     })
-    console.log(APIdata);
+    console.log(data);
   }
 
   render() {
@@ -43,7 +43,7 @@ class MapView extends Component {
         
         <APIget getData /> 
         
-        <RoutingMachine QRMarkers={this.APIdata.infopoints} />
+        <RoutingMachine QRMarkers={data.QRMarkers} />
 
         <Geo />
 
