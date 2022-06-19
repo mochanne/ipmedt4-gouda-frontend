@@ -2,6 +2,8 @@
 // test link `https://jsonplaceholder.typicode.com/posts`
 
 import { useState, useEffect} from "react";
+import RoutingMachine from "./RoutingMachine";
+import QRMarkers from './QRMarkers';
 
 import axios from "axios";
 
@@ -12,15 +14,35 @@ export default function APIget(){
       const getData = async () => {
         try {
           const response = await axios.get(
-            "http://lillibot.co.uk:8080/api/routeinfo/2" 
+            "http://lillibot.co.uk:8080/api/routeinfo/2"
           );
           setData(response.data);
         } finally {
-          console.log(data); 
+          
         }
       };
       getData();
     }, []);
+
+    let infopoints;
+    let QRpoints;
+
+    if (data !== null){
+      infopoints = <RoutingMachine QRMarkers={data.infopoints} />
+    }
+
+    if (data !== null){
+      QRpoints = <QRMarkers QRMarkers={data.infopoints}/>
+    }
+
+    return(
+      <article>
+        {infopoints}
+        {QRpoints}
+      </article>
+    )
+
+
     
 }
 

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { Map, MapContainer, TileLayer } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import data from '../assets/data';
-import QRMarkers from './QRMarkers';
-import RoutingMachine from "./RoutingMachine";
+//import data from '../assets/data';
+//import QRMarkers from './QRMarkers';
+//import RoutingMachine from "./RoutingMachine";
 import APIget from './APIget';
 import Geo from './Geo';
-import axios from 'axios';
 
 class MapView extends Component {
   constructor(props) {
@@ -17,22 +16,8 @@ class MapView extends Component {
     }
   }
 
-  APIdata = {infopoints: {}};
-
-  onLoad = () =>{
-    const BASE_URL = "http://lillibot.co.uk:8080/api/routeinfo/2"
-    axios.get(BASE_URL).then(res => {
-      this.setState({
-        infopoints:res.APIdata.infopoints
-      })
-    })
-    console.log(data);
-  }
-
   render() {
     const { currentLocation, zoom } = this.state;
-    this.onLoad();
-    console.log(this.APIdata.infopoints);
 
     return (
       <MapContainer center={currentLocation} zoom={zoom}>
@@ -41,13 +26,11 @@ class MapView extends Component {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         
-        <APIget getData /> 
+        <APIget /> 
         
-        <RoutingMachine QRMarkers={data.QRMarkers} />
-
         <Geo />
 
-        <QRMarkers QRMarkers={data.QRMarkers}/>
+        
       </MapContainer>
     );
   }
@@ -55,4 +38,5 @@ class MapView extends Component {
 
 export default MapView;
 
-//
+//<RoutingMachine QRMarkers={data.QRMarkers} />
+//<QRMarkers QRMarkers={data.QRMarkers}/>

@@ -14,23 +14,25 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const createRoutineMachineLayer = (props) => {
-  console.log(props);
+  //console.log(props);
+  //console.log(props.QRMarkers[0].latitude)
+  //console.log(props.QRMarkers[0].longitude)
   const instance = L.Routing.control({
     waypoints: [
-      L.latLng(props.QRMarkers[0].geometry[0], props.QRMarkers[0].geometry[1]),
-      L.latLng(props.QRMarkers[1].geometry[0], props.QRMarkers[1].geometry[1]),
-      L.latLng(props.QRMarkers[2].geometry[0], props.QRMarkers[2].geometry[1]),
-      L.latLng(props.QRMarkers[3].geometry[0], props.QRMarkers[3].geometry[1]),
-      L.latLng(props.QRMarkers[4].geometry[0], props.QRMarkers[4].geometry[1]),
-      L.latLng(props.QRMarkers[5].geometry[0], props.QRMarkers[5].geometry[1]),
-      L.latLng(props.QRMarkers[6].geometry[0], props.QRMarkers[6].geometry[1]),
-      L.latLng(props.QRMarkers[7].geometry[0], props.QRMarkers[7].geometry[1]),
-      L.latLng(props.QRMarkers[8].geometry[0], props.QRMarkers[8].geometry[1]),
-      L.latLng(props.QRMarkers[9].geometry[0], props.QRMarkers[9].geometry[1]),
-      L.latLng(props.QRMarkers[10].geometry[0], props.QRMarkers[10].geometry[1]),
-      L.latLng(props.QRMarkers[11].geometry[0], props.QRMarkers[11].geometry[1]),
-      L.latLng(props.QRMarkers[12].geometry[0], props.QRMarkers[12].geometry[1]),
-      L.latLng(props.QRMarkers[0].geometry[0], props.QRMarkers[0].geometry[1])/**/
+      L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude),
+      L.latLng(props.QRMarkers[1].latitude, props.QRMarkers[1].longitude),
+      L.latLng(props.QRMarkers[2].latitude, props.QRMarkers[2].longitude),
+      L.latLng(props.QRMarkers[3].latitude, props.QRMarkers[3].longitude),
+      L.latLng(props.QRMarkers[4].latitude, props.QRMarkers[4].longitude),
+      L.latLng(props.QRMarkers[5].latitude, props.QRMarkers[5].longitude),
+      L.latLng(props.QRMarkers[6].latitude, props.QRMarkers[6].longitude),
+      L.latLng(props.QRMarkers[7].latitude, props.QRMarkers[7].longitude),
+      L.latLng(props.QRMarkers[8].latitude, props.QRMarkers[8].longitude),
+      L.latLng(props.QRMarkers[9].latitude, props.QRMarkers[9].longitude),
+      L.latLng(props.QRMarkers[10].latitude, props.QRMarkers[10].longitude),
+      L.latLng(props.QRMarkers[11].latitude, props.QRMarkers[11].longitude),
+      L.latLng(props.QRMarkers[12].latitude, props.QRMarkers[12].longitude),
+      L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude)/**/
     ],
     lineOptions: {
       styles: [{ color: "#6FA1EC", weight: 4 }]
@@ -43,7 +45,7 @@ const createRoutineMachineLayer = (props) => {
     show: false,
     addWaypoints: false,
     routeWhileDragging: true,
-    draggableWaypoints: true,
+    draggableWaypoints: false,
     fitSelectedRoutes: false,
     showAlternatives: false
   });
