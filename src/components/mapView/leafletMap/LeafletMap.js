@@ -5,7 +5,6 @@ import 'leaflet/dist/leaflet.css';
 // import QRMarkers from './QRMarkers';
 // import RoutingMachine from "./RoutingMachine";
 import APIget from './APIget';
-import Geo from './Geo';
 
 class LeafletMap extends Component {
   constructor(props) {
