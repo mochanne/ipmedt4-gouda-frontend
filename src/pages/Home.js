@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 import './Home.css';
 import RouteCard from '../components/home/RouteCard';
@@ -7,28 +8,18 @@ import RouteCard from '../components/home/RouteCard';
 class Home extends React.Component {
 
     state = {
-        routeList: [
-            {
-                id: 0,
-                name: 'West 3',
-                distance: '5km',
-                totalPoints: 15,
-                completedPoints: 12,
-                imgUrl: 'img/west3.jpg'
-            },
-            {
-                id: 1,
-                name: 'Noord 1',
-                distance: '3km',
-                totalPoints: 10,
-                completedPoints: 0,
-                imgUrl: 'img/noord1.jpg'
-            },
-        ]
+        routes: []
+    }
+
+    componentDidMount() {
+        axios.get("http://lillibot.co.uk:8080/api/routelist")
+        .then(res => {
+            const routes = res.data;
+            this.setState({ routes })
+        })
     }
 
     render() {
-
 
         return(
             <main className='home'>
@@ -47,7 +38,7 @@ class Home extends React.Component {
                     </header>
                     <section className='home__routeCardList'>
 
-                        {this.state.routeList.map( route => 
+                        {this.state.routes.map( route => 
                             
                             <Link to='/map' key={route.id} state={route}>
                                 <RouteCard route={route}/>

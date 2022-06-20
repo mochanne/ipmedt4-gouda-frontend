@@ -9,6 +9,7 @@
     position: relative;
     z-index: 1;
     transition: 0.2s all ease;
+    overflow-x: hidden;
 }
 
 .home__watermark {

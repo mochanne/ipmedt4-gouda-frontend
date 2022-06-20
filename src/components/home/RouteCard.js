@@ -6,28 +6,30 @@ const RouteCard = (props) => {
 
     var btnText;
 
-    if(props.route.completedPoints > 0){
-        btnText = "Ga verder";
-    } else {
-        btnText = "Start";
-    }
+    // if(props.route.completedPoints > 0){
+    //     btnText = "Ga verder";
+    // } else {
+    //     btnText = "Start";
+    // }
 
-    let completed = parseInt((props.route.completedPoints/props.route.totalPoints)*100)
+    // let completed = parseInt((props.route.completedPoints/props.route.totalPoints)*100)
+
+
 
     return(
         <section className="routeCard">
 
             <figure className="routeCard__image">
-                <img src={props.route.imgUrl} alt="" />
+                <img src={props.route.afbeelding} alt="route img" />
             </figure>
 
-            <section className="routeCard__progressCard">
+            {/* <section className="routeCard__progressCard">
                 <p className="routeCard__progressCard-score"> {props.route.completedPoints} / {props.route.totalPoints} </p>
-            </section>
+            </section> */}
 
             <section className="routeCard__content">
-                <h3> {props.route.name} </h3>
-                <p> {props.route.distance} </p>
+                <h3> {props.route.naam.split('-')[0]} </h3>
+                {/* <p> {props.route.distance} </p> */}
 
                 <button className="routeCard__startBtn">
                     <p className="routeCard__startBtn-text"> {btnText} </p>
@@ -40,7 +42,7 @@ const RouteCard = (props) => {
 
                 <section className="routeCard__progressBar">
                     <figure className="routeCard__progressBar-total"></figure>
-                    <figure className="routeCard__progressBar-complete" style={{width:completed+'%'}}></figure>
+                    {/* <figure className="routeCard__progressBar-complete" style={{width:completed+'%'}}></figure> */}
                 </section>
 
             </section>
