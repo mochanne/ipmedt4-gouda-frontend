@@ -1,5 +1,5 @@
-import { Popup } from "react-leaflet";
 import MarkerPopup from "./MarkerPopup";
+import DefPopup from "./defPopup";
 
 const calculateDistance = (props) =>
 {
@@ -27,16 +27,19 @@ const calculateDistance = (props) =>
       
       //console.log("distance==?",d);
     
-      let Popup
+      let Popup 
 
       if(d < 0.02){
         Popup = <MarkerPopup data={[props.data[0],props.data[1],props.data[2],props.data[3]]}/>
-      }
+      } else{
+        Popup = <DefPopup key={props.data[4]} data = {[d,props.data[3]]} />
+      };
 
 
     return(
         
         [Popup]
+        
         
     );
 }

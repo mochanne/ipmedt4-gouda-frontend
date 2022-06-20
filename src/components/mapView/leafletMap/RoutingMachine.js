@@ -3,8 +3,8 @@ import { createControlComponent } from "@react-leaflet/core";
 import "leaflet-routing-machine";
 import "lrm-graphhopper"
 
-import icon from '../../../assets/marker.png';
-import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+import icon from '../../../assets/marker-empty.png';
+import iconShadow from '../../../assets/marker-empty.png' //'leaflet/dist/images/marker-shadow.png';
 
 let DefaultIcon = L.icon({
   iconUrl: icon,
