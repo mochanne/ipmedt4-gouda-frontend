@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import {Popup} from 'react-leaflet';
 
-import './Popup.css';
+import './MarkerPopup.css';
 
-const Popup = () => {
+const MarkerPopup = (props) => {
 
     const [toggleState, setToggleState] = useState(1);
 
@@ -11,29 +12,22 @@ const Popup = () => {
     }
 
     const content = {
-        gedicht: "Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br /> aliqua. Ut enim ad minim veniam <br/><br/> Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br/> aliqua. Ut enim ad minim veniam<br /> <br /> Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br /> aliqua. Ut enim ad minim veniam <br/> <br/>  Lorem ipsum dolor sit amet <br/> consectetur adipiscing elit <br/> aliqua. Ut enim ad minim veniam",
-        info: "Mi sit amet mauris commodo. Consequat semper viverra nam libero justo laoreet sit amet cursus. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Cursus vitae congue mauris rhoncus aenean vel. Eros donec ac odio tempor orci dapibus ultrices in."
+        afbeelding : props.data[0],
+        gedicht: props.data[1],
+        info: props.data[2],
+        naam: props.data[3]
     };
 
-    
-
     return(
-        <section className="popup__overlay">
+        <Popup>
 
-            <article className="popup">
-
-                <button className="popup__closeBtn">
-                    <span className="material-symbols-outlined">
-                        close
-                    </span>
-                </button>
-
+            <section className="popup__container">
                 <figure className="popup__image">
-                    <img src="img/popup_image.jpg" alt="popup image" />
+                    <img src={content.afbeelding} alt="popup image" />
                 </figure>
 
                 <header className="popup__header">
-                    <h2>Placeholder</h2>
+                    <h2> {content.naam} </h2>
                 </header>
 
                 <section className="popup__content-container">
@@ -56,11 +50,10 @@ const Popup = () => {
                     </section>
                     
                 </section>
+            </section>
 
-            </article>
-
-        </section>
+        </Popup>
     );
 }
 
-export default Popup;
+export default MarkerPopup;

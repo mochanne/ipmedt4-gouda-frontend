@@ -1,46 +1,23 @@
-.popup__overlay {
-    position: absolute;
-    height: 100vh;
-    width: 100vw;
-    z-index: 42070;
-    display: flex;
-    justify-content: center;
-
-    background: rgba(0,0,0,0.2);
+.leaflet-popup-content-wrapper {
+    background:var(--clr-white);
+    height: 60rem;
+    border-radius: 4rem;
+}
+.leaflet-popup-content {
+    height: 100%;
+    width: 40rem !important; 
+    padding: 0;
+    margin: 0;
+}
+.leaflet-popup-close-button{
+    display: none;
 }
 
-.popup{
-    position: absolute;
-    width: 90%;
-    max-width: 50rem;
-    height: calc(100% - 30rem);
-    top: 10rem;
+.popup__container{
     display: flex;
     flex-direction: column;
-
-    background: var(--clr-white);
-    border-radius: 4.5rem;
-    box-shadow: 0 8px 15px rgba(50,50,93,.2), 0 5px 10px rgba(0,0,0,.1);
-
-    animation: 0.8s pop-in;
-}
-
-.popup__closeBtn{
-    position: absolute;
-    top: 2.5rem;
-    right: 2.5rem;
-    cursor: pointer;
-
-    background: none;
-    border: none;
-}
-.popup__closeBtn .material-symbols-outlined{
-    color: var(--clr-white);
-    font-size: 3rem;
-    font-weight: 600;
-}
-.popup__closeBtn:hover .material-symbols-outlined{
-    color: var(--clr-secondary);
+    gap: 1rem;
+    height: 100%;
 }
 
 .popup__image {
@@ -52,7 +29,7 @@
     width: 100%;
     object-fit: cover;
 
-    border-radius: 4.5rem 4.5rem 0 0;
+    border-radius: 4rem 4rem 0 0;
 }
 
 .popup__header {
@@ -109,7 +86,7 @@
     height: calc(100% - 8.5rem);
     display: none;
     overflow-y: scroll;
-    padding: 1rem 1rem 0 0;
+    padding: 0 1rem 0 0;
 }
 .active-content {
     display: block;

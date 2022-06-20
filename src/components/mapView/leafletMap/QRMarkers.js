@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import {Marker} from 'react-leaflet';
 import {Icon} from './Icon';
-import MarkerPopup from './MarkerPopup';
 import Geo from "./Geo";
 import CalculateDistance from "./CalculateDistance.js";
 

@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 import './MapView.css';
 import LeafletMap from '../components/mapView/leafletMap/LeafletMap';
 import MapMenu from '../components/mapView/MapMenu';
-import Popup from '../components/mapView/Popup';
+// import Popup from '../components/mapView/MarkerPopup';
 
 
 const MapView = () => {
