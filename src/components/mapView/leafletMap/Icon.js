@@ -1,11 +1,11 @@
 import L from 'leaflet';
 export const Icon = L.icon({
-  iconUrl: require('../assets/leaf-green.png'), 
-  iconRetinaUrl: require('../assets/leaf-green.png'),  
+  iconUrl: require('../../../assets/marker.png'), 
+  iconRetinaUrl: require('../../../assets/marker.png'),  
   iconAnchor: null,
   shadowUrl: null,
   shadowSize: null,  
   shadowAnchor: null,
-  iconSize: [35, 35],
+  iconSize: [26, 35],
   className: 'icon'
 });

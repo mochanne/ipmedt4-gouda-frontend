@@ -1,0 +1,23 @@
+.progressBar{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.progressBar__total{
+    height: 2rem;
+    width: 100%;
+    /* position: absolute; */
+
+    background: var(--clr-grey);
+    border-radius: 1rem;
+}
+.progressBar__complete{
+    height: 2rem;
+    position: absolute;
+    z-index: 2;
+
+    background: var(--clr-secondary);
+    border-radius: 1rem;
+}

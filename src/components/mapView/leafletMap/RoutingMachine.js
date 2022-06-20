@@ -3,7 +3,7 @@ import { createControlComponent } from "@react-leaflet/core";
 import "leaflet-routing-machine";
 import "lrm-graphhopper"
 
-import icon from 'leaflet/dist/images/marker-icon.png';
+import icon from '../../../assets/marker.png';
 import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
 let DefaultIcon = L.icon({
@@ -35,7 +35,7 @@ const createRoutineMachineLayer = (props) => {
       L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude)/**/
     ],
     lineOptions: {
-      styles: [{ color: "#6FA1EC", weight: 4 }]
+      styles: [{ color: "#347656", weight: 4 }]
     },
     router: new L.Routing.graphHopper('866aff00-bd42-435e-9e17-aca9086c4095', {
       urlParameters: {
@@ -47,7 +47,8 @@ const createRoutineMachineLayer = (props) => {
     routeWhileDragging: true,
     draggableWaypoints: false,
     fitSelectedRoutes: false,
-    showAlternatives: false
+    showAlternatives: false,
+    
   });
 
   return instance;
