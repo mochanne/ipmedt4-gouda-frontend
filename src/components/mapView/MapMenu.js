@@ -10,7 +10,7 @@ const MapMenu = (props) => {
 
             <section className="mapMenu__left">
                 <header className="mapMenu__header">
-                    <h2>{props.route.name}</h2>
+                    <h2>{props.route.naam.split('-')[0]}</h2>
                 </header>
 
                 <section className="mapMenu__progressBar">
