@@ -41,7 +41,7 @@ class Home extends React.Component {
                         {this.state.routes.map( route => 
                             
                             <Link to='/map' key={route.id} state={route}>
-                                <RouteCard route={route}/>
+                                <RouteCard route={route} completed={2}/>
                             </Link>
 
                         )}

@@ -14,13 +14,13 @@ const MapMenu = (props) => {
                 </header>
 
                 <section className="mapMenu__progressBar">
-                    <ProgressBar totalPoints={props.route.totalPoints} completedPoints={props.route.completedPoints} />
+                    <ProgressBar totalPoints={props.route.aantal} completedPoints={0} />
                 </section>
             </section>
 
             <section className="mapMenu__right">
                 <section className="mapMenu__progressCard">
-                    <p className="mapMenu__progressCard-score"> {props.route.completedPoints} / {props.route.totalPoints} </p>
+                    <p className="mapMenu__progressCard-score"> {0} / {props.route.aantal} </p>
                 </section>
             </section>
 

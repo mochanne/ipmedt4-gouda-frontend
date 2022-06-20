@@ -1,6 +1,7 @@
 import React from "react";
 
 import './RouteCard.css';
+import ProgressBar from "../ProgressBar";
 
 const RouteCard = (props) => {
 
@@ -12,7 +13,7 @@ const RouteCard = (props) => {
     //     btnText = "Start";
     // }
 
-    // let completed = parseInt((props.route.completedPoints/props.route.totalPoints)*100)
+    let completed = parseInt((0/props.route.totalPoints)*100)
 
 
 
@@ -23,13 +24,12 @@ const RouteCard = (props) => {
                 <img src={props.route.afbeelding} alt="route img" />
             </figure>
 
-            {/* <section className="routeCard__progressCard">
-                <p className="routeCard__progressCard-score"> {props.route.completedPoints} / {props.route.totalPoints} </p>
-            </section> */}
+            <section className="routeCard__progressCard">
+                <p className="routeCard__progressCard-score"> {props.completed} / {props.route.aantal} </p>
+            </section>
 
             <section className="routeCard__content">
                 <h3> {props.route.naam.split('-')[0]} </h3>
-                {/* <p> {props.route.distance} </p> */}
 
                 <button className="routeCard__startBtn">
                     <p className="routeCard__startBtn-text"> {btnText} </p>
@@ -41,8 +41,7 @@ const RouteCard = (props) => {
 
 
                 <section className="routeCard__progressBar">
-                    <figure className="routeCard__progressBar-total"></figure>
-                    {/* <figure className="routeCard__progressBar-complete" style={{width:completed+'%'}}></figure> */}
+                    <ProgressBar totalPoints={props.route.aantal} completedPoints={props.completed} />
                 </section>
 
             </section>
