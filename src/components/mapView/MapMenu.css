@@ -23,6 +23,7 @@
 }
 .mapMenu__header{
     color: var(--clr-black);
+    text-transform: capitalize;
 }
 
 .mapMenu__progressCard {

@@ -7,11 +7,11 @@ const RouteCard = (props) => {
 
     var btnText;
 
-    // if(props.route.completedPoints > 0){
-    //     btnText = "Ga verder";
-    // } else {
-    //     btnText = "Start";
-    // }
+    if(props.completed > 0){
+        btnText = "Ga verder";
+    } else {
+        btnText = "Start";
+    }
 
     let completed = parseInt((0/props.route.totalPoints)*100)
 
@@ -29,7 +29,9 @@ const RouteCard = (props) => {
             </section>
 
             <section className="routeCard__content">
-                <h3> {props.route.naam.split('-')[0]} </h3>
+                <header className="routeCard__content-header">
+                    <h3> {props.route.naam.toLowerCase().split('-')[0]} </h3>
+                </header>
 
                 <button className="routeCard__startBtn">
                     <p className="routeCard__startBtn-text"> {btnText} </p>

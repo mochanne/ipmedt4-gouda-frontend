@@ -60,6 +60,10 @@
     justify-content: space-around;
 }
 
+.routeCard__content-header h3{
+    text-transform: capitalize;
+}
+
 .routeCard__startBtn {
     margin-top: 0.5rem;
     display: flex;

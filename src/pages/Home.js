@@ -8,7 +8,8 @@ import RouteCard from '../components/home/RouteCard';
 class Home extends React.Component {
 
     state = {
-        routes: []
+        routes: [],
+        completed: 0
     }
 
     componentDidMount() {
@@ -41,7 +42,7 @@ class Home extends React.Component {
                         {this.state.routes.map( route => 
                             
                             <Link to='/map' key={route.id} state={route}>
-                                <RouteCard route={route} completed={2}/>
+                                <RouteCard route={route} completed={this.state.completed}/>
                             </Link>
 
                         )}

@@ -35,7 +35,7 @@ export default function APIget(){
 
     if (data !== null){
       QRpoints = <Geo QRMarkers={data.infopoints}/>
-      console.log(data);
+      // console.log(data);
     }
 
     return(
