@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {Popup} from 'react-leaflet';
 
-import './MarkerPopup.css';
+import './ActivePopup.css';
 
 const MarkerPopup = (props) => {
 

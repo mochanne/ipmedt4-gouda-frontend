@@ -1,5 +1,5 @@
-import MarkerPopup from "../MarkerPopup";
-import DefPopup from "./defPopup";
+import ActivePopup from "./ActivePopup";
+import NonActivePopup from "./NonActivePopup";
 
 const calculateDistance = (props) =>
 {
@@ -32,9 +32,9 @@ const calculateDistance = (props) =>
       let Popup 
 
       if(d < 0.02){
-        Popup = <MarkerPopup data={[props.data[0],props.data[1],props.data[2],props.data[3]]}/>
+        Popup = <ActivePopup data={[props.data[0],props.data[1],props.data[2],props.data[3]]}/>
       } else{
-        Popup = <DefPopup key={props.data[4]} data = {[d,props.data[3]]} />
+        Popup = <NonActivePopup key={props.data[4]} data={[d,props.data[3]]} />
       };
 
 
