@@ -5,20 +5,22 @@ import ProgressBar from "../ProgressBar";
 
 const RouteCard = (props) => {
 
+    var isComingSoon = props.isComingSoon;
+
     var btnText;
 
-    if(props.completed > 0){
-        btnText = "Ga verder";
+    if (isComingSoon){
+        btnText = "Komt binnenkort"
     } else {
-        btnText = "Start";
+        if(props.completed > 0){
+            btnText = "Ga verder";
+        } else {
+            btnText = "Start";
+        }
     }
 
-    let completed = parseInt((0/props.route.totalPoints)*100)
-
-
-
     return(
-        <section className="routeCard">
+        <section className={`routeCard ${isComingSoon ? "routeCard__disabled" : ""}`}>
 
             <figure className="routeCard__image">
                 <img src={props.route.afbeelding} alt="route img" />

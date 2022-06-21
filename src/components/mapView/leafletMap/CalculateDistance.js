@@ -7,10 +7,10 @@ const calculateDistance = (props) =>
 
     const toRadian = n => (n * Math.PI) / 180
   
-      // let lat2 = 52.011239
-      // let lon2 = 4.710288
-      let lat2 = latlong.lat
-      let lon2 = latlong.lng 
+      let lat2 = 52.011239
+      let lon2 = 4.710288
+      // let lat2 = latlong.lat
+      // let lon2 = latlong.lng 
       let lat1 = props.data[4]//lattitude1
       let lon1 = props.data[5] //longittude1
   

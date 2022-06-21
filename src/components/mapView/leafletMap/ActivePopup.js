@@ -13,7 +13,7 @@ const MarkerPopup = (props) => {
 
     const content = {
         afbeelding : props.data[0],
-        gedicht: props.data[1],
+        gedicht: props.data[1].replace(/(?:\r\n|\r|\n)/g, '<br />').replace(/[.]/g, '<br />'),
         info: props.data[2],
         naam: props.data[3]
     };

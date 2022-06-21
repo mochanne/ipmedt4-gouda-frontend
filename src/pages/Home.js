@@ -39,13 +39,18 @@ class Home extends React.Component {
                     </header>
                     <section className='home__routeCardList'>
 
-                        {this.state.routes.map( route => 
-                            
-                            <Link to='/map' key={route.id} state={route}>
-                                <RouteCard route={route} completed={this.state.completed}/>
-                            </Link>
 
-                        )}
+                    {this.state.routes.map((route) => {
+                        if (route.id === 2) {
+                            return <Link to='/map' key={route.id} state={route}>
+                                    <RouteCard route={route} completed={this.state.completed} isComingSoon={false}/>
+                                </Link>;
+                        } else {
+                            return <RouteCard key={route.id} route={route} completed={this.state.completed} isComingSoon={true}/>
+                        }
+                           
+                        })}
+                                            
                         
                     </section>
                 </article>

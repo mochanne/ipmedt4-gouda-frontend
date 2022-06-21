@@ -22,6 +22,17 @@
     animation: wiggle 0.8s infinite ease;
 }
 
+.routeCard__disabled {
+    opacity: 0.85;
+}
+.routeCard__disabled:hover {
+    cursor: not-allowed;
+    box-shadow: 0 10px 20px rgba(50,50,93,.15), 0 5px 10px rgba(0,0,0,.1);
+}
+.routeCard__disabled:hover .routeCard__startBtn .material-symbols-outlined {
+    animation: wiggle 0s infinite ease;
+}
+
 .routeCard__image {
     height: 100%;
     width: 100%;
@@ -71,8 +82,6 @@
 
     background: transparent;
     border: none;
-
-    cursor: pointer;
 }
 .routeCard__startBtn-text {
     font-size: 1.6rem;
