@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import QRMarkers from './QRMarkers';
 import {LocationIcon} from './Icon';
+import LocationPopup from "./LocationPopup";
 
 const LocationMarker = (props) => {
     const [position, setPosition] = useState(null);
@@ -19,9 +20,9 @@ const LocationMarker = (props) => {
         <QRMarkers QRMarkers={[props.QRMarkers, position]} />
 
       <Marker position={position} icon={LocationIcon}>
-        <Popup>
+        <LocationPopup>
           <p> U bent hier </p>
-        </Popup>
+        </LocationPopup>
       </Marker>
       </article>
     );

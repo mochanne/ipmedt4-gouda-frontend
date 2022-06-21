@@ -1,0 +1,33 @@
+.leaflet-popup-content-wrapper {
+    background:var(--clr-white);
+    height: 100%;
+    border-radius: 4rem;
+}
+
+.leaflet-popup-content {
+    height: 100%;
+    width: 100% !important; 
+    padding: 0;
+    margin: 0;
+}
+.leaflet-popup-close-button{
+    display: none;
+}
+
+.locationPopup__content{
+    width: 12rem;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* gap: 0rem; */
+    background: var(--clr-secondary);
+    border-radius: 4rem;
+    padding: 1rem;
+}
+.locationPopup__content p {
+    margin: 0;
+    color: var(--clr-white);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
