@@ -11,7 +11,7 @@ const LocationMarker = (props) => {
 
     useEffect(() => {
       map.locate().on("locationfound", function (e) {
-        setPosition([52.010117, 4.706840]);//e.latlng);
+        setPosition(e.latlng);
       });
     }, [map]);
 
