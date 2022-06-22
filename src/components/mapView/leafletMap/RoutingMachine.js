@@ -14,11 +14,28 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const createRoutineMachineLayer = (props) => {
-  //console.log(props);
-  //console.log(props.QRMarkers[0].latitude)
-  //console.log(props.QRMarkers[0].longitude)
+  console.log(props);
+  console.log(props.QRMarkers[0].latitude)
+  console.log(props.QRMarkers[0].longitude)
+  const array =(props.QRMarkers);
+  console.log(array);
+  console.log(array.length);
+  const arraylength = (array.length);
+
+  var wps = [];
+
+  for (var i = 0; i < arraylength; i++) {
+    let inwps = (L.latLng(props.QRMarkers[i].latitude, props.QRMarkers[i].longitude));
+    wps.push(inwps);
+    console.log(inwps);
+    console.log(wps);
+}
+
+console.log(wps);
+wps.push(L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude))
+
   const instance = L.Routing.control({
-    waypoints: [
+    waypoints: wps /*[
       L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude),
       L.latLng(props.QRMarkers[1].latitude, props.QRMarkers[1].longitude),
       L.latLng(props.QRMarkers[2].latitude, props.QRMarkers[2].longitude),
@@ -32,8 +49,8 @@ const createRoutineMachineLayer = (props) => {
       L.latLng(props.QRMarkers[10].latitude, props.QRMarkers[10].longitude),
       L.latLng(props.QRMarkers[11].latitude, props.QRMarkers[11].longitude),
       L.latLng(props.QRMarkers[12].latitude, props.QRMarkers[12].longitude),
-      L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude)/**/
-    ],
+      L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude)
+    ]*/,
     lineOptions: {
       styles: [{ color: "#347656", weight: 4 }]
     },
