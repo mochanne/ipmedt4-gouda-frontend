@@ -3,10 +3,10 @@ import {Popup} from 'react-leaflet';
 
 import './NonActivePopup.css';
 
+//dit maakt de popus zodat ze er goed uitzien
+
 const NonActivePopup = (props) => {
     let afstand = Math.round(props.data[0] * 1000);
-    const naam = props.data[3];
-
 
   return  (
     <Popup>

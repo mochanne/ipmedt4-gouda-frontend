@@ -3,6 +3,8 @@ import {Popup} from 'react-leaflet';
 
 import './ActivePopup.css';
 
+//hier wordt de popup gemaakt zodat die er goed uit ziet
+
 const MarkerPopup = (props) => {
 
     const [toggleState, setToggleState] = useState(1);
@@ -23,7 +25,7 @@ const MarkerPopup = (props) => {
 
             <section className="popup__container">
                 <figure className="popup__image">
-                    <img src={content.afbeelding} alt="popup image" />
+                    <img src={content.afbeelding} alt="popup" />
                 </figure>
 
                 <header className="popup__header">

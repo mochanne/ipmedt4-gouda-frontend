@@ -9,13 +9,12 @@ const LocationMarker = (props) => {
     const [position, setPosition] = useState(null);
     const map = useMap();
 
+    // e is je locatie die die vindt
     useEffect(() => {
       map.locate().on("locationfound", function (e) {
         setPosition(e.latlng);
       });
     }, [map]);
-
-    //position =[52.010117, 4.706840];
 
     return position === null ? null : (
       <article>

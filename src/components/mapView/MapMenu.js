@@ -1,5 +1,4 @@
 import React from "react";
-
 import './MapMenu.css';
 import ProgressBar from '../ProgressBar';
 

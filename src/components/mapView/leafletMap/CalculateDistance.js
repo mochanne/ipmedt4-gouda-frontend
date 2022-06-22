@@ -1,22 +1,18 @@
 import ActivePopup from "./ActivePopup";
 import NonActivePopup from "./NonActivePopup";
 
+//met deze formule berekendt die hemelsbreed hoever je van het punt af bent in km
+
 const calculateDistance = (props) =>
 {
     let latlong = props.data[6];
 
     const toRadian = n => (n * Math.PI) / 180
   
-      // let lat2 = 52.011239
-      // let lon2 = 4.710288
-      // let lat2 = 52.010117
-      // let lon2 = 4.706840
       let lat2 = latlong.lat
        let lon2 = latlong.lng 
-      let lat1 = props.data[4]//lattitude1
-      let lon1 = props.data[5] //longittude1
-  
-      //console.log(lat1, lon1+"==="+lat2, lon2)
+      let lat1 = props.data[4]
+      let lon1 = props.data[5]
       
       let R = 6371  // km
       let x1 = lat2 - lat1
@@ -28,10 +24,10 @@ const calculateDistance = (props) =>
         Math.cos(toRadian(lat1)) * Math.cos(toRadian(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2)
       let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
       let d = R * c
-      
-      //console.log("distance==?",d);
     
       let Popup 
+
+      //hiermee zorgt die dat de markers de juiste popup geven als die dichtbij genoeg zijn
 
       if(d < 0.02){
         Popup = <ActivePopup data={[props.data[0],props.data[1],props.data[2],props.data[3]]}/>
@@ -49,5 +45,3 @@ const calculateDistance = (props) =>
 }
 
 export default calculateDistance;
-
-//(lattitude1, longittude1,lattitude2,longittude2)

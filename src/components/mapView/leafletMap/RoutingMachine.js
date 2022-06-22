@@ -14,43 +14,23 @@ let DefaultIcon = L.icon({
 L.Marker.prototype.options.icon = DefaultIcon;
 
 const createRoutineMachineLayer = (props) => {
-  console.log(props);
-  console.log(props.QRMarkers[0].latitude)
-  console.log(props.QRMarkers[0].longitude)
   const array =(props.QRMarkers);
-  console.log(array);
-  console.log(array.length);
   const arraylength = (array.length);
 
   var wps = [];
 
+  //stopt de waypoints in een array
   for (var i = 0; i < arraylength; i++) {
     let inwps = (L.latLng(props.QRMarkers[i].latitude, props.QRMarkers[i].longitude));
     wps.push(inwps);
-    console.log(inwps);
-    console.log(wps);
 }
 
-console.log(wps);
+//maakt de route rond
 wps.push(L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude))
 
+//zorgt dat de waypoints zichtbaar zijn
   const instance = L.Routing.control({
-    waypoints: wps /*[
-      L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude),
-      L.latLng(props.QRMarkers[1].latitude, props.QRMarkers[1].longitude),
-      L.latLng(props.QRMarkers[2].latitude, props.QRMarkers[2].longitude),
-      L.latLng(props.QRMarkers[3].latitude, props.QRMarkers[3].longitude),
-      L.latLng(props.QRMarkers[4].latitude, props.QRMarkers[4].longitude),
-      L.latLng(props.QRMarkers[5].latitude, props.QRMarkers[5].longitude),
-      L.latLng(props.QRMarkers[6].latitude, props.QRMarkers[6].longitude),
-      L.latLng(props.QRMarkers[7].latitude, props.QRMarkers[7].longitude),
-      L.latLng(props.QRMarkers[8].latitude, props.QRMarkers[8].longitude),
-      L.latLng(props.QRMarkers[9].latitude, props.QRMarkers[9].longitude),
-      L.latLng(props.QRMarkers[10].latitude, props.QRMarkers[10].longitude),
-      L.latLng(props.QRMarkers[11].latitude, props.QRMarkers[11].longitude),
-      L.latLng(props.QRMarkers[12].latitude, props.QRMarkers[12].longitude),
-      L.latLng(props.QRMarkers[0].latitude, props.QRMarkers[0].longitude)
-    ]*/,
+    waypoints: wps,
     lineOptions: {
       styles: [{ color: "#347656", weight: 4 }]
     },

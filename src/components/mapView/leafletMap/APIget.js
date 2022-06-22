@@ -1,9 +1,5 @@
-//const api_base_url = "http://lillibot.co.uk:8080"
-// test link `https://jsonplaceholder.typicode.com/posts`
-
 import { useState, useEffect} from "react";
 import RoutingMachine from "./RoutingMachine";
-import QRMarkers from './QRMarkers';
 import Geo from "./Geo";
 
 import axios from "axios";
@@ -11,6 +7,7 @@ import axios from "axios";
 export default function APIget(){
     const [data, setData] = useState(null);
     
+    // haalt de API op
     useEffect(() => {
       const getData = async () => {
         try {
@@ -25,7 +22,7 @@ export default function APIget(){
       getData();
     }, []);
 
-    
+    // zorgt dat als er data van de API komt dit weergegeven wordt door de juiste componenten
     let infopoints;
     let QRpoints;
 
@@ -35,7 +32,6 @@ export default function APIget(){
 
     if (data !== null){
       QRpoints = <Geo QRMarkers={data.infopoints}/>
-      // console.log(data);
     }
 
     return(
